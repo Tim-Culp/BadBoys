@@ -208,20 +208,19 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="CaseController.cs" />
+    <Compile Include="Controllers\CaseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="CrimeController.cs" />
-    <Compile Include="SuspectController.cs" />
+    <Compile Include="Controllers\CrimeController.cs" />
+    <Compile Include="Controllers\SuspectController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="OfficerController.cs" />
+    <Compile Include="Controllers\OfficerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -310,6 +309,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BadBoys.Data\BadBoys.Data.csproj">
+      <Project>{7d1ee07d-4026-4eec-b696-c159b60f9ecb}</Project>
+      <Name>BadBoys.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BadBoys.Models\BadBoys.Models.csproj">
+      <Project>{6d92a945-25aa-4f28-be8f-e22ea36d6481}</Project>
+      <Name>BadBoys.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BadBoys.Services\BadBoys.Services.csproj">
+      <Project>{b27f638f-02ef-41de-bafb-575f13643371}</Project>
+      <Name>BadBoys.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,7 +53,7 @@
     <Compile Include="Suspect\SuspectCreate.cs" />
     <Compile Include="Suspect\SuspectDetail.cs" />
     <Compile Include="Suspect\SuspectEdit.cs" />
-    <Compile Include="Suspect\SuspectList.cs" />
+    <Compile Include="Suspect\SuspectListItem.cs" />
     <Compile Include="Officer\OfficerDetail.cs" />
     <Compile Include="Officer\OfficerList.cs" />
     <Compile Include="Officer\OfficerEdit.cs" />
