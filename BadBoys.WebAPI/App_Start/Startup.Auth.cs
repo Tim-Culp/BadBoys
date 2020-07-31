@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using BadBoys.WebAPI.Providers;
 using BadBoys.WebAPI.Models;
+using BadBoys.Data;
 
 namespace BadBoys.WebAPI
 {

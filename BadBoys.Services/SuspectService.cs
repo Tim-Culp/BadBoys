@@ -1,7 +1,6 @@
-﻿using BadBoys.Data;
+﻿
+using BadBoys.Data;
 using BadBoys.Models;
-using BadBoys.WebAPI.Models;
-using ElevenNote.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +26,7 @@ namespace BadBoys.Services
                     Name = model.Name,
                     Height = model.Height,
                     Weight = model.Weight,
-                    DateBooked = DateTimeOffset.Now
+                    DateBooked = model.DateBooked
                 };
 
             using (var ctx = new ApplicationDbContext())

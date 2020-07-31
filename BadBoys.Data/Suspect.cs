@@ -20,6 +20,7 @@ namespace BadBoys.Data
         [Required]
         public bool PriorConviction { get; set; }
         [Required]
-        public DateTimeOffset DateBooked { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime DateBooked { get; set; }
     }
 }

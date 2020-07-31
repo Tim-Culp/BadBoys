@@ -17,6 +17,6 @@ namespace BadBoys.Models
         [Required]
         public int Weight { get; set; }
         [Required]
-        public DateTimeOffset DateBooked { get; set; }
+        public DateTime DateBooked { get; set; }
     }
 }
