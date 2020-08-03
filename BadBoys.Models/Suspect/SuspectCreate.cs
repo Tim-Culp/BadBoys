@@ -17,6 +17,8 @@ namespace BadBoys.Models
         [Required]
         public int Weight { get; set; }
         [Required]
+        public bool PriorConviction { get; set; }
+        [Required]
         public DateTime DateBooked { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using BadBoys.Data;
+﻿using BadBoys.Data;
 using BadBoys.Models;
 using System;
 using System.Collections.Generic;

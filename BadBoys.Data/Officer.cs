@@ -9,6 +9,8 @@ namespace BadBoys.Data
 {
     public class Officer
     {   [Key]
+        public int Id { get; set; }
+        [Required]
         public Guid OfficerId { get; set; }
         [Required]
         public string Name { get; set; }
