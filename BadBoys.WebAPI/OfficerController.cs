@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BadBoys.Models;
+using BadBoys.Services;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +12,60 @@ namespace BadBoys.WebAPI
 {
     public class OfficerController : ApiController
     {
+        private OfficerService CreateOfficerService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var officerService = new OfficerService(userId);
+            return officerService;
+        }
+        [HttpPost]
+        [Route("api/Officer")]
+        public IHttpActionResult Post(OfficerCreate officer)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateOfficerService();
+            if (!service.CreateOfficer(officer))
+                return InternalServerError();
+            return Ok();
+        }
+        [HttpGet]
+        [Route("api/Officer")]
+        public IHttpActionResult Get()
+        {
+            OfficerService officerService = CreateOfficerService();
+            var officers = officerService.ReadOfficers();
+            return Ok(officers);
+        }
+        [HttpGet]
+        [Route("api/Officer/{id}")]
+        public IHttpActionResult Get(Guid id)
+        {
+            OfficerService officerService = CreateOfficerService();
+            var officer = officerService.ReadOfficerById(id);
+            return Ok(officer);
+        }
+        [HttpPut]
+        [Route("api/Officer")]
+        public IHttpActionResult Put(OfficerEdit model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateOfficerService();
+            if (!service.EditOfficer(model))
+                return InternalServerError();
+            return Ok();
+        }
+        [HttpDelete]
+        [Route("api/Officer/{id}")]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateOfficerService();
+
+            if (!service.DeleteOfficer(id))
+                return InternalServerError();
+            return Ok();
+        }
         //// GET api/<controller>
         //public IEnumerable<string> Get()
         //{
