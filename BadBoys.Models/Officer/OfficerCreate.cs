@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Models
 {
-    public class OfficerCreate : Officer
+    public class OfficerCreate
     {
+        public string FullName { get; set; }
+        public OfficerRank RankOfOfficer { get; set; }
     }
 }

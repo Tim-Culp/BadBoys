@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BadBoys.Models;
+using BadBoys.Services;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,33 +10,62 @@ using System.Web.Http;
 
 namespace BadBoys.WebAPI
 {
+    [Authorize]
     public class CaseController : ApiController
     {
-        //// GET api/<controller>
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
+        public IHttpActionResult Get()
+        {
+            CaseService caseService = CreateCaseService();
+            var cases = caseService.GetCases();
+            return Ok(cases);
+        }
+        public IHttpActionResult Post(CaseCreate currentCase)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-        //// GET api/<controller>/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+            var service = CreateCaseService();
 
-        //// POST api/<controller>
-        //public void Post([FromBody] string value)
-        //{
-        //}
+            if (!service.CreateCase(currentCase))
+                return InternalServerError();
 
-        //// PUT api/<controller>/5
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+            return Ok();
+        }
+        private CaseService CreateCaseService()
+        {
+            var officerId = Guid.Parse(User.Identity.GetUserId());
+            var suspectCase = new CaseService(officerId);
+            return suspectCase;
+        }
 
-        //// DELETE api/<controller>/5
-        //public void Delete(int id)
-        //{
-        //}
+        public IHttpActionResult GetCase(int CaseId)
+        {
+            CaseService caseService = CreateCaseService();
+            var suspect = caseService.GetCaseById(CaseId);
+            return Ok(CaseId);
+        }
+
+        public IHttpActionResult PutCase(CaseEdit currentCase)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateCaseService();
+
+            if (!service.UpdateCase(currentCase))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        public IHttpActionResult DeleteCase(int id)
+        {
+            var service = CreateCaseService();
+
+            if (!service.DeleteCase(id))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Models
 {
-    public class SuspectList
+    public class SuspectList : Suspect
     {
     }
 }

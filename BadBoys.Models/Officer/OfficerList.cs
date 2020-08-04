@@ -9,5 +9,9 @@ namespace BadBoys.Models
 {
     public class OfficerList
     {
+        public Guid OfficerId { get; set; }
+        public string FullName { get; set; }
+        public OfficerRank RankOfOfficer { get; set; }
+        public int? CurrentCase { get; set; }
     }
 }
