@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BadBoys.Data
-{
+{/*
     public class OfficerCase
     {
         [Key]
@@ -18,5 +18,5 @@ namespace BadBoys.Data
         public int OfficerId { get; set; }
         public virtual Officer Officer { get; set; }
         public virtual Case Case { get; set; }
-    }
+    }*/
 }

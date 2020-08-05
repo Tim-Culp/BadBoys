@@ -12,5 +12,6 @@ namespace BadBoys.Models
 
         public string FullName { get; set; }
         public OfficerRank RankOfOfficer { get; set; }
+        public Guid OfficerId { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using BadBoys.Data;
 using BadBoys.Models;
-using BadBoys.Models.OfficerCase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Services
 {
-    public class OfficerCaseService
+   /* public class OfficerCaseService
     {
         private readonly Guid _officerId;
         public OfficerCaseService() { }
@@ -54,5 +53,5 @@ namespace BadBoys.Services
             return caseStrings;
 
         }
-    }
+    }*/
 }

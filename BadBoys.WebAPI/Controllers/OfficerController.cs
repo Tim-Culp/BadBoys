@@ -14,7 +14,7 @@ namespace BadBoys.WebAPI
     {
         private OfficerService CreateOfficerService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
+            var userId = Guid.Parse(User.Identity.GetUserId()); //error
             var officerService = new OfficerService(userId);
             return officerService;
         }

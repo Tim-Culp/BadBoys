@@ -61,7 +61,7 @@ namespace BadBoys.Services
                     OfficerKeyId = entity.OfficerKeyId,
                     FullName = entity.FullName,
                     RankOfOfficer = entity.RankOfOfficer,
-                    CurrentCase = entity.CurrentCase
+                   // CurrentCase = entity.CurrentCase
                 };
             }
         }

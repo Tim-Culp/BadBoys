@@ -1,4 +1,4 @@
-﻿using BadBoys.Models.OfficerCase;
+﻿
 using BadBoys.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Http;
 
 namespace BadBoys.WebAPI
-{
+{/*
     public class OfficerCaseController : ApiController
     {
         private OfficerCaseService CreateOfficerCaseService()
@@ -19,7 +19,8 @@ namespace BadBoys.WebAPI
         }
         [HttpPost]
         [Route("api/OfficerCase")]
-        public IHttpActionResult Post(OfficerCaseCreate officerCase)
+        public IHttpActionResult Post(
+    Create officerCase)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -28,5 +29,5 @@ namespace BadBoys.WebAPI
                 return InternalServerError();
             return Ok();
         }
-    }
+    }*/
 }
