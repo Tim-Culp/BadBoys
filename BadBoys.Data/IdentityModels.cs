@@ -35,6 +35,7 @@ namespace BadBoys.Data
         }
         
         public DbSet<Officer> Officers { get; set; }
+        public DbSet<OfficerCase> OfficerCases { get; set; }
         public DbSet<Suspect> Suspects { get; set; }
         public DbSet<Case> Cases { get; set; }
         public DbSet<Crime> Crimes { get; set; }

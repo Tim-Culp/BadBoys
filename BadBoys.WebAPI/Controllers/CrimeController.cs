@@ -45,7 +45,7 @@ namespace BadBoys.WebAPI
         public IHttpActionResult Get(int id)
         {
             CrimeService service = CreateCrimeService();
-            var crime = service.GetCrimeById(id);
+            var crime = service.GetCrimeByCrimeId(id);
             return Ok(crime);
         }
 

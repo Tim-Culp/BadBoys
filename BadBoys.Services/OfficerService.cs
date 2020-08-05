@@ -12,7 +12,6 @@ namespace BadBoys.Services
     {
         private readonly Guid _officerId;
 
-        public OfficerService() { }
         public OfficerService(Guid officerId)
         {
             _officerId = officerId;
@@ -46,7 +45,7 @@ namespace BadBoys.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var officerCaseService = new CaseService(OfficerId);
+                /*var officerCaseService = new CaseService(OfficerKeyId);
                 if (ctx.Officers.Count() < 1)
                 {
                     return new OfficerDetail()
@@ -55,11 +54,11 @@ namespace BadBoys.Services
                         RankOfOfficer = OfficerRank.Lieutenant,
                         FullName = ""
                     };
-                }
+                }*/
                 var entity = ctx.Officers.Single(e => e.OfficerId == OfficerId);
                 return new OfficerDetail
                 {
-                    OfficerId = entity.OfficerId,
+                    OfficerKeyId = entity.OfficerKeyId,
                     FullName = entity.FullName,
                     RankOfOfficer = entity.RankOfOfficer,
                     CurrentCase = entity.CurrentCase
@@ -76,7 +75,7 @@ namespace BadBoys.Services
                            .Single(e => e.OfficerId == model.OfficerId);
                 entity.FullName = model.FullName;
                 entity.RankOfOfficer = model.RankOfOfficer;
-                entity.CurrentCase = model.CurrentCase;
+               // entity.CurrentCase = model.CurrentCase;
                 return ctx.SaveChanges() == 1;
             }
         }

@@ -38,11 +38,11 @@ namespace BadBoys.WebAPI
             return suspectCase;
         }
 
-        public IHttpActionResult GetCase(int CaseId)
+        public IHttpActionResult GetCase(int id)
         {
             CaseService caseService = CreateCaseService();
-            var suspect = caseService.GetCaseById(CaseId);
-            return Ok(CaseId);
+            var currentCase = caseService.GetCaseById(id);
+            return Ok(currentCase);
         }
 
         public IHttpActionResult PutCase(CaseEdit currentCase)

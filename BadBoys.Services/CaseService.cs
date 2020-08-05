@@ -10,21 +10,22 @@ namespace BadBoys.Services
 {
     public class CaseService
     {
-        private readonly Guid _officerId;
+        private readonly Guid _userId;
 
-        public CaseService(Guid officerId)
+        public CaseService(Guid userId)
         {
-            _officerId = officerId;
+            _userId = userId;
         }
 
         public bool CreateCase(CaseCreate model)
         {
             var entity = new Case()
             {
-                OfficerId = _officerId,
+                OwnerId = _userId,
                 DateOfIncident = model.DateOfIncident,
-                Suspect = model.Suspect,
-                Crime = model.Crime,
+                SuspectId = model.SuspectId,
+                CrimeId = model.CrimeId,
+                OfficerKeyId = model.OfficerKeyId
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -41,13 +42,14 @@ namespace BadBoys.Services
                 var query =
                     ctx
                         .Cases
-                        .Where(e => e.OfficerId == _officerId)
+                        .Where(e => e.OwnerId == _userId)
                         .Select(e => new CaseList
                         {
-                            OfficerId = _officerId,
+                            CaseId = e.CaseId,
                             DateOfIncident = e.DateOfIncident,
+                            Officer = e.Officer,
                             Suspect = e.Suspect,
-                            Crime = e.Crime,
+                            Crime = e.Crime
                         });
                 return query.ToArray();
             }
@@ -59,14 +61,15 @@ namespace BadBoys.Services
                 var entity =
                     ctx
                         .Cases
-                        .Single(e => e.OfficerId == _officerId);
+                        .Single(e => e.CaseId == id && e.OwnerId == _userId);
 
                 return new CaseDetail()
                 {
-                    OfficerId = _officerId,
+                    CaseId = entity.CaseId,
                     DateOfIncident = entity.DateOfIncident,
+                    Officer = entity.Officer,
                     Suspect = entity.Suspect,
-                    Crime = entity.Crime,
+                    Crime = entity.Crime
                 };
             }
         }
@@ -77,21 +80,22 @@ namespace BadBoys.Services
                 var entity =
                     ctx
                         .Cases
-                        .Single(e => e.OfficerId == model.OfficerId);
+                        .Single(e => e.CaseId == model.CaseId && e.OwnerId == _userId);
                 entity.DateOfIncident = model.DateOfIncident;
+                entity.Officer = model.Officer;
                 entity.Suspect = model.Suspect;
                 entity.Crime = model.Crime;
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteCase(int CaseId)
+        public bool DeleteCase(int caseId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                         ctx
                             .Cases
-                            .Single(e => e.Id == CaseId && e.OfficerId == _officerId);
+                            .Single(e => e.CaseId == caseId && e.OwnerId == _userId);
                 ctx.Cases.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }

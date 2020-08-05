@@ -25,14 +25,9 @@ namespace BadBoys.WebAPI
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var service = CreateOfficerService();
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            if (!(service.ReadOfficerById(userId).OfficerId == userId))
-            {
-                if (!service.CreateOfficer(officer))
-                    return InternalServerError();
-                return Ok();
-            }
-            return InternalServerError();
+            if (!service.CreateOfficer(officer))
+                return InternalServerError();
+            return Ok();
         }
         [HttpGet]
         [Route("api/Officer")]

@@ -11,6 +11,7 @@ using Owin;
 using BadBoys.WebAPI.Providers;
 using BadBoys.WebAPI.Models;
 using Microsoft.Owin.Security.Cookies;
+using BadBoys.Data;
 
 namespace BadBoys.WebAPI
 {

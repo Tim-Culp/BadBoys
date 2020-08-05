@@ -9,6 +9,7 @@ namespace BadBoys.Models
 {
     public class OfficerCreate
     {
+
         public string FullName { get; set; }
         public OfficerRank RankOfOfficer { get; set; }
     }

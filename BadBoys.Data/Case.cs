@@ -11,18 +11,22 @@ namespace BadBoys.Data
     public class Case
     {
         [Key]
-        public int Id { get; set; }
+        public int CaseId { get; set; }
         [Required]
-        public Guid OfficerId { get; set; }
+        public Guid OwnerId { get; set; } 
         [Required]
         public DateTime DateOfIncident { get; set; }
-        [Required]
-        public string Suspect { get; set; }
-        //[ForeignKey(nameof(SuspectId))]
-        //public virtual Suspect Suspect { get; set; }
-        [Required]
-        public string Crime { get; set; }
-        //[ForeignKey(nameof(CrimeId))]
-        //public virtual Crime Crime { get; set; }
+        
+        public int OfficerKeyId { get; set; }
+        [ForeignKey(nameof(Officer))]
+        public virtual Officer Officer { get; set; }
+       
+        public int SuspectId { get; set; }
+        [ForeignKey(nameof(SuspectId))]
+        public virtual Suspect Suspect { get; set; }
+       
+        public int CrimeId { get; set; }
+        [ForeignKey(nameof(CrimeId))]
+        public virtual Crime Crime { get; set; }
     }
 }

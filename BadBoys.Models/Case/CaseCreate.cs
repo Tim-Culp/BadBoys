@@ -9,13 +9,12 @@ namespace BadBoys.Models
 {
     public class CaseCreate
     {
-        
-        //public Guid OfficerId { get; set; }
-    
         public DateTime DateOfIncident { get; set; }
      
-        public string Suspect { get; set; }
+        public int SuspectId { get; set; }
 
-        public string Crime { get; set; }
+        public int CrimeId { get; set; }
+
+        public int OfficerKeyId { get; set; }
     }
 }

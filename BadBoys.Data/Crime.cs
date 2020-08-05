@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Data
 {
-    public enum CrimeTypes { Theft, DrugPossession, Jaywalking, Homicide, Treason}
+    public enum CrimeTypes { Theft = 1, DrugPossession, Jaywalking, Homicide, Treason}
     public class Crime
     {
         [Key]
-        public int id { get; set; }
+        public int CrimeId { get; set; }
 
         [Required]
         public CrimeTypes CrimeType { get; set; }

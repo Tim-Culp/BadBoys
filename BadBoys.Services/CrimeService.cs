@@ -22,7 +22,7 @@ namespace BadBoys.Services
             var entity =
                 new Crime()
                 {
-                    id = model.id,
+                    CrimeId = model.CrimeId,
                     CrimeDescription = model.CrimeDescription,
                     CrimeType = model.CrimeType,
                     Penalty = model.Penalty
@@ -46,7 +46,7 @@ namespace BadBoys.Services
                             {
                                 CrimeDescription = e.CrimeDescription,
                                 CrimeType = e.CrimeType,
-                                id = e.id,
+                                CrimeId = e.CrimeId,
                                 Penalty = e.Penalty
                             }
 
@@ -55,17 +55,17 @@ namespace BadBoys.Services
             }
         }
 
-        public CrimeDetail GetCrimeById(int id)
+        public CrimeDetail GetCrimeByCrimeId(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Crimes
-                        .Single(e => e.id == id);
+                        .Single(e => e.CrimeId == id);
                 return new CrimeDetail()
                 {
-                    id = entity.id,
+                    CrimeId = entity.CrimeId,
                     CrimeDescription = entity.CrimeDescription,
                     CrimeType = entity.CrimeType,
                     Penalty = entity.Penalty
@@ -80,7 +80,7 @@ namespace BadBoys.Services
                 var entity =
                     ctx
                         .Crimes
-                        .Single(e => e.id == model.id);
+                        .Single(e => e.CrimeId == model.CrimeId);
                 entity.CrimeDescription = model.CrimeDescription;
                 entity.CrimeType = model.CrimeType;
                 entity.Penalty = model.Penalty;
@@ -96,7 +96,7 @@ namespace BadBoys.Services
                 var entity =
                     ctx
                         .Crimes
-                        .Single(e => e.id == id);
+                        .Single(e => e.CrimeId == id);
                 ctx.Crimes.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
