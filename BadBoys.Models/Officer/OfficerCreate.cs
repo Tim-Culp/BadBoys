@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Models
 {
+    
     public class OfficerCreate
     {
 
         public string FullName { get; set; }
         public OfficerRank RankOfOfficer { get; set; }
-        public Guid OfficerId { get; set; }
+        //public int OfficerId { get; set; }
+
+        //public int BadgeId { get; set; }
     }
 }

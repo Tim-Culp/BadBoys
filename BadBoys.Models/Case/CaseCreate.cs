@@ -15,6 +15,6 @@ namespace BadBoys.Models
 
         public int CrimeId { get; set; }
 
-        public int OfficerKeyId { get; set; }
+        public int BadgeId { get; set; }
     }
 }

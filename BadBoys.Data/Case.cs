@@ -17,8 +17,8 @@ namespace BadBoys.Data
         [Required]
         public DateTime DateOfIncident { get; set; }
         
-        public int OfficerKeyId { get; set; }
-        [ForeignKey(nameof(OfficerKeyId))]
+        public int BadgeId { get; set; }
+        [ForeignKey(nameof(BadgeId))]
         public virtual Officer Officer { get; set; }
        
         public int SuspectId { get; set; }

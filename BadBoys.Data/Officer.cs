@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Data
 {
+    //[JsonConverter(typeof(StringEnumConverter))]
     public enum OfficerRank
     {
         Technician = 1,
@@ -23,7 +26,7 @@ namespace BadBoys.Data
     public class Officer
     {
         [Key]
-        public int OfficerKeyId { get; set; }
+        public int BadgeId { get; set; }
         public Guid OfficerId { get; set; }
         public string FullName { get; set; }
         public OfficerRank RankOfOfficer { get; set; }

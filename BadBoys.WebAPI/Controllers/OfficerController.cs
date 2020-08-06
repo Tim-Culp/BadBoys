@@ -10,13 +10,16 @@ using System.Web.Http;
 
 namespace BadBoys.WebAPI
 {
+    [Authorize] //new code 1422 8/6
     public class OfficerController : ApiController
     {
-        private OfficerService CreateOfficerService()
+        [HttpGet]
+        [Route("api/Officer")]
+        public IHttpActionResult Get()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId()); //error
-            var officerService = new OfficerService(userId);
-            return officerService;
+            OfficerService officerService = CreateOfficerService();
+            var officers = officerService.ReadOfficers();
+            return Ok(officers);
         }
         [HttpPost]
         [Route("api/Officer")]
@@ -29,17 +32,16 @@ namespace BadBoys.WebAPI
                 return InternalServerError();
             return Ok();
         }
-        [HttpGet]
-        [Route("api/Officer")]
-        public IHttpActionResult Get()
+        private OfficerService CreateOfficerService()
         {
-            OfficerService officerService = CreateOfficerService();
-            var officers = officerService.ReadOfficers();
-            return Ok(officers);
+            var userId = Guid.Parse(User.Identity.GetUserId()); //error 
+            var officerService = new OfficerService(userId);
+            return officerService;
         }
+
         [HttpGet]
         [Route("api/Officer/{id}")]
-        public IHttpActionResult Get(Guid id)
+        public IHttpActionResult Get(int id)
         {
             OfficerService officerService = CreateOfficerService();
             var officer = officerService.ReadOfficerById(id);
@@ -58,7 +60,7 @@ namespace BadBoys.WebAPI
         }
         [HttpDelete]
         [Route("api/Officer/{id}")]
-        public IHttpActionResult Delete(Guid id)
+        public IHttpActionResult Delete(int id)
         {
             var service = CreateOfficerService();
 

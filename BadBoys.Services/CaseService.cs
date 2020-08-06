@@ -25,7 +25,7 @@ namespace BadBoys.Services
                 DateOfIncident = model.DateOfIncident,
                 SuspectId = model.SuspectId,
                 CrimeId = model.CrimeId,
-                OfficerKeyId = model.OfficerKeyId
+                BadgeId = model.BadgeId
             };
 
             using (var ctx = new ApplicationDbContext())

@@ -10,20 +10,20 @@ namespace BadBoys.Services
 {
     public class OfficerService
     {
-        private readonly Guid _officerId;
+        private readonly Guid _userId;
 
-        public OfficerService(Guid officerId)
+        public OfficerService(Guid userId)
         {
-            _officerId = officerId;
+            _userId = userId;
         }
 
         public bool CreateOfficer(OfficerCreate model)
         {
             var entity = new Officer()
             {
+                OfficerId = _userId, 
                 FullName = model.FullName,
                 RankOfOfficer = model.RankOfOfficer,
-                OfficerId = _officerId
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -36,12 +36,12 @@ namespace BadBoys.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.Officers.Select(e => new OfficerList { FullName = e.FullName, OfficerId = e.OfficerId });
+                var query = ctx.Officers.Select(e => new OfficerList { FullName = e.FullName, BadgeId = e.BadgeId, RankOfOfficer = e.RankOfOfficer, });
                 return query.OrderBy(s => s.FullName).ToArray();
             }
         }
 
-        public OfficerDetail ReadOfficerById(Guid OfficerId)
+        public OfficerDetail ReadOfficerById(int BadgeId)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -55,10 +55,10 @@ namespace BadBoys.Services
                         FullName = ""
                     };
                 }*/
-                var entity = ctx.Officers.Single(e => e.OfficerId == OfficerId);
+                var entity = ctx.Officers.Single(e => e.BadgeId == BadgeId);
                 return new OfficerDetail
                 {
-                    OfficerKeyId = entity.OfficerKeyId,
+                    BadgeId = entity.BadgeId,
                     FullName = entity.FullName,
                     RankOfOfficer = entity.RankOfOfficer,
                    // CurrentCase = entity.CurrentCase
@@ -72,7 +72,7 @@ namespace BadBoys.Services
                 var entity =
                             ctx
                            .Officers
-                           .Single(e => e.OfficerId == model.OfficerId);
+                           .Single(e => e.BadgeId == model.BadgeId);
                 entity.FullName = model.FullName;
                 entity.RankOfOfficer = model.RankOfOfficer;
                // entity.CurrentCase = model.CurrentCase;
@@ -80,14 +80,14 @@ namespace BadBoys.Services
             }
         }
 
-        public bool DeleteOfficer(Guid OfficerId)
+        public bool DeleteOfficer(int BadgeId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Officers
-                        .Single(e => e.OfficerId == _officerId);
+                        .Single(e => e.BadgeId == BadgeId);
                 ctx.Officers.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
