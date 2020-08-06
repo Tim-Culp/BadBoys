@@ -31,7 +31,7 @@ namespace BadBoys.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Cases.Add(entity);
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() == 1; 
             }
         }
 

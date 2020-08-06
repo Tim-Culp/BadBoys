@@ -22,7 +22,9 @@ namespace BadBoys.WebAPI
         public IHttpActionResult Post(SuspectCreate suspect)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             var service = CreateSuspectService();
 
