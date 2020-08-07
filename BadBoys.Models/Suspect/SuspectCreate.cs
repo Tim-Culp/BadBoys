@@ -1,6 +1,7 @@
 ﻿using BadBoys.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace BadBoys.Models
         [Required]
         public int Weight { get; set; }
         [Required]
+        [DefaultValue(false)]
         public bool PriorConviction { get; set; }
         public DateTime? DateBooked { get; set; }
     }

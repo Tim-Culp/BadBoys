@@ -22,7 +22,6 @@ namespace BadBoys.Services
             var entity =
                 new Crime()
                 {
-                    CrimeId = model.CrimeId,
                     CrimeDescription = model.CrimeDescription,
                     CrimeType = model.CrimeType,
                     Penalty = model.Penalty
@@ -44,9 +43,9 @@ namespace BadBoys.Services
                         .Select(e =>
                             new CrimeList()
                             {
-                                CrimeDescription = e.CrimeDescription,
-                                CrimeType = e.CrimeType,
                                 CrimeId = e.CrimeId,
+                                CrimeType = e.CrimeType,
+                                CrimeDescription = e.CrimeDescription,
                                 Penalty = e.Penalty
                             }
 

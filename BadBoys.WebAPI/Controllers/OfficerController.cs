@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace BadBoys.WebAPI
 {
-    [Authorize] //new code 1422 8/6
+    [Authorize] 
     public class OfficerController : ApiController
     {
         [HttpGet]

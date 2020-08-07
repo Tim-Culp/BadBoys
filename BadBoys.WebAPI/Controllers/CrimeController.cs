@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace BadBoys.WebAPI
 {
+    [Authorize]
     public class CrimeController : ApiController
     {
         private CrimeService CreateCrimeService()

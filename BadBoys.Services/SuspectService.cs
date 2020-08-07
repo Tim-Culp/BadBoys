@@ -22,7 +22,6 @@ namespace BadBoys.Services
             var entity =
                 new Suspect()
                 {
-                    //SuspectId = model.Id,
                     Name = model.Name,
                     Height = model.Height,
                     Weight = model.Weight,
@@ -46,9 +45,7 @@ namespace BadBoys.Services
                     {
                         SuspectId = e.SuspectId,
                         Name = e.Name,
-                        DateBooked = e.DateBooked,
-                        Height = e.Height,
-                        Weight = e.Weight
+                        DateBooked = e.DateBooked
                     }
                         );
 
@@ -85,6 +82,7 @@ namespace BadBoys.Services
                 entity.Name = model.Name;
                 entity.Height = model.Height;
                 entity.Weight = model.Weight;
+                entity.PriorConviction = model.PriorConviction;
 
                 return ctx.SaveChanges() == 1;
             }

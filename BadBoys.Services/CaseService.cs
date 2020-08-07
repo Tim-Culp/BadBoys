@@ -82,20 +82,20 @@ namespace BadBoys.Services
                         .Cases
                         .Single(e => e.CaseKeyId == model.CaseKeyId && e.OwnerId == _userId);
                 entity.DateOfIncident = model.DateOfIncident;
-                entity.Officer = model.Officer;
-                entity.Suspect = model.Suspect;
-                entity.Crime = model.Crime;
+                entity.BadgeId = model.BadgeId;
+                entity.SuspectId = model.SuspectId;
+                entity.CrimeId = model.CrimeId;
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteCase(int caseId)
+        public bool DeleteCase(int caseKeyId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                         ctx
                             .Cases
-                            .Single(e => e.CaseKeyId == caseId && e.OwnerId == _userId);
+                            .Single(e => e.CaseKeyId == caseKeyId && e.OwnerId == _userId);
                 ctx.Cases.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }

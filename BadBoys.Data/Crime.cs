@@ -9,15 +9,12 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Data
 {
-    //[JsonConverter(typeof(StringEnumConverter))]
     public enum CrimeTypes { Theft = 1, DrugPossession, Jaywalking, Homicide, Treason}
     public class Crime
     {
         [Key]
         public int CrimeId { get; set; }
-
         [Required]
-        [JsonConverter(typeof(StringEnumConverter))]
         public CrimeTypes CrimeType { get; set; }
         [Required]
         public string CrimeDescription { get; set; }

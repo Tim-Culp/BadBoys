@@ -16,15 +16,12 @@ namespace BadBoys.Data
         public Guid OwnerId { get; set; } 
         [Required]
         public DateTime DateOfIncident { get; set; }
-        
         public int BadgeId { get; set; }
         [ForeignKey(nameof(BadgeId))]
         public virtual Officer Officer { get; set; }
-       
         public int SuspectId { get; set; }
         [ForeignKey(nameof(SuspectId))]
         public virtual Suspect Suspect { get; set; }
-       
         public int CrimeId { get; set; }
         [ForeignKey(nameof(CrimeId))]
         public virtual Crime Crime { get; set; }

@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Data
 {
-    //[JsonConverter(typeof(StringEnumConverter))]
     public enum OfficerRank
     {
         Technician = 1,
@@ -20,8 +19,8 @@ namespace BadBoys.Data
         Sergeant,
         Lieutenant,
         Captain,
-        DeputyCheif,
-        Cheif
+        DeputyChief,
+        Chief
     };
     public class Officer
     {

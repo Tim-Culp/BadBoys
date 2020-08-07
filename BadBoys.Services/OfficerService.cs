@@ -41,21 +41,11 @@ namespace BadBoys.Services
             }
         }
 
-        public OfficerDetail ReadOfficerById(int BadgeId)
+        public OfficerDetail ReadOfficerById(int badgeId)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                /*var officerCaseService = new CaseService(OfficerKeyId);
-                if (ctx.Officers.Count() < 1)
-                {
-                    return new OfficerDetail()
-                    {
-                        OfficerId = new Guid(),
-                        RankOfOfficer = OfficerRank.Lieutenant,
-                        FullName = ""
-                    };
-                }*/
-                var entity = ctx.Officers.Single(e => e.BadgeId == BadgeId);
+                var entity = ctx.Officers.Single(e => e.BadgeId == badgeId);
                 return new OfficerDetail
                 {
                     BadgeId = entity.BadgeId,
@@ -80,14 +70,14 @@ namespace BadBoys.Services
             }
         }
 
-        public bool DeleteOfficer(int BadgeId)
+        public bool DeleteOfficer(int badgeId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Officers
-                        .Single(e => e.BadgeId == BadgeId);
+                        .Single(e => e.BadgeId == badgeId);
                 ctx.Officers.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
