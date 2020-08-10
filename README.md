@@ -35,14 +35,14 @@ When adding a suspect to the Suspect class you will need to set the postman web 
 Once you have completed the above instructions you will be able to compile addition cases in post man with the web address set to post at local host /api/Case. you will need to add DateOfIncident (date) SuspectiD (int) that is auto assigned from the suspect class, CrimeId (int) that is auto assigned from the crime class, and BadgeId (int) that is auto assigned from the Officer class. Once completed you will be able to set Postman to the get method and see all the finer details of the case.</p>
                  <p align="center">
 Many thanks to the following resources for helping us complete these project:<br>
-https://www.dofactory.com/net/decorator-design-pattern
-https://www.c-sharpcorner.com/article/how-guid-is-generated/
-https://www.codeproject.com/Questions/5273526/Csharp-cannot-convert-from-0-to-1-error?PageFlow=Fluid
-https://exceptionnotfound.net/serializing-enumerations-in-asp-net-web-api/
-https://stackoverflow.com/questions/13556243/entity-framework-5-multiple-identity-columns-specified-for-table-only-one-ident
-https://stackoverflow.com/questions/36998570/asp-net-web-api-2-double-backslash-in-string-after-serialization
-https://docs.microsoft.com/en-us/ef/ef6/fundamentals/relationships
-https://stackoverflow.com/questions/41285555/web-api-net-action-with-custom-endpoint-names
-https://entityframework.net/knowledge-base/44747032/no-context-type-was-found-in-the-assembly-when-running-code-first-migration
+https://www.dofactory.com/net/decorator-design-pattern<br>
+https://www.c-sharpcorner.com/article/how-guid-is-generated/<br>
+https://www.codeproject.com/Questions/5273526/Csharp-cannot-convert-from-0-to-1-error?PageFlow=Fluid<br>
+https://exceptionnotfound.net/serializing-enumerations-in-asp-net-web-api/<br>
+https://stackoverflow.com/questions/13556243/entity-framework-5-multiple-identity-columns-specified-for-table-only-one-ident<br>
+https://stackoverflow.com/questions/36998570/asp-net-web-api-2-double-backslash-in-string-after-serialization<br>
+https://docs.microsoft.com/en-us/ef/ef6/fundamentals/relationships<br>
+https://stackoverflow.com/questions/41285555/web-api-net-action-with-custom-endpoint-names<br>
+https://entityframework.net/knowledge-base/44747032/no-context-type-was-found-in-the-assembly-when-running-code-first-migration<br>
                                   </p>
 
