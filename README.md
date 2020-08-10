@@ -32,7 +32,7 @@ When adding a crime to the Crime Class you will need to set the postman web addr
 <p align="center">
 When adding a suspect to the Suspect class you will need to set the postman web address to post at local host address /api/Suspect and need Name (string), Height (string), Weight (int), PriorConviction (bool) and DateBooked (date) please note that if you include characters after the height (e.g. 6’1” the ” character comes across JSON as a special character and will display a ‘\’ character. Json displaying the ‘\’ does not show up in the SQL data table. 
 <p align="center">
-Once you have completed the above instructions you will be able to compile addition cases in post man with the web address set to post at local host /api/Case. you will need to add DateOfIncident (date) SuspectiD (int) that is auto assigned from the suspect class, CrimeId (int) that is auto assigned from the crime class, and BadgeId (int) that is auto assigned from the Officer class. Once completed you will be able to set Postman to the get method and see all the finer details of the case.</p>
+Once you have completed the above instructions you will be able to compile addition cases in post man with the web address set to post at local host /api/Case. you will need to add DateOfIncident (date) SuspectId (int) that is auto assigned from the suspect class, CrimeId (int) that is auto assigned from the crime class, and BadgeId (int) that is auto assigned from the Officer class. Once completed you will be able to set Postman to the get method and see all the finer details of the case.</p>
                  <p align="center">
 Many thanks to the following resources for helping us complete these project:<br>
 https://www.dofactory.com/net/decorator-design-pattern<br>
