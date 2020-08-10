@@ -33,3 +33,16 @@ When adding a crime to the Crime Class you will need to set the postman web addr
 When adding a suspect to the Suspect class you will need to set the postman web address to post at local host address /api/Suspect and need Name (string), Height (string), Weight (int), PriorConviction (bool) and DateBooked (date) please note that if you include characters after the height (e.g. 6’1” the ” character comes across JSON as a special character and will display a ‘\’ character. Json displaying the ‘\’ does not show up in the SQL data table. 
 <p align="center">
 Once you have completed the above instructions you will be able to compile addition cases in post man with the web address set to post at local host /api/Case. you will need to add DateOfIncident (date) SuspectiD (int) that is auto assigned from the suspect class, CrimeId (int) that is auto assigned from the crime class, and BadgeId (int) that is auto assigned from the Officer class. Once completed you will be able to set Postman to the get method and see all the finer details of the case.</p>
+                 <p align="center">
+Many thanks to the following resources for helping us complete these project:<br>
+https://www.dofactory.com/net/decorator-design-pattern
+https://www.c-sharpcorner.com/article/how-guid-is-generated/
+https://www.codeproject.com/Questions/5273526/Csharp-cannot-convert-from-0-to-1-error?PageFlow=Fluid
+https://exceptionnotfound.net/serializing-enumerations-in-asp-net-web-api/
+https://stackoverflow.com/questions/13556243/entity-framework-5-multiple-identity-columns-specified-for-table-only-one-ident
+https://stackoverflow.com/questions/36998570/asp-net-web-api-2-double-backslash-in-string-after-serialization
+https://docs.microsoft.com/en-us/ef/ef6/fundamentals/relationships
+https://stackoverflow.com/questions/41285555/web-api-net-action-with-custom-endpoint-names
+https://entityframework.net/knowledge-base/44747032/no-context-type-was-found-in-the-assembly-when-running-code-first-migration
+                                  </p>
+
