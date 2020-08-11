@@ -38,7 +38,6 @@ namespace BadBoys.WebAPI
             var officerService = new OfficerService(userId);
             return officerService;
         }
-
         [HttpGet]
         [Route("api/Officer/{id}")]
         public IHttpActionResult Get(int id)

@@ -13,12 +13,16 @@ namespace BadBoys.WebAPI
     [Authorize]
     public class SuspectController : ApiController
     {
+        [HttpGet]
+        [Route("api/Suspect")]
         public IHttpActionResult Get()
         {
             SuspectService suspectService = CreateSuspectService();
             var suspects = suspectService.GetSuspects();
             return Ok(suspects);
         }
+        [HttpPost]
+        [Route("api/Suspect")]
         public IHttpActionResult Post(SuspectCreate suspect)
         {
             if (!ModelState.IsValid)
@@ -39,14 +43,16 @@ namespace BadBoys.WebAPI
             var suspectService = new SuspectService(userId);
             return suspectService;
         }
-
+        [HttpGet]
+        [Route("api/Suspect/{id}")]
         public IHttpActionResult Get(int id)
         {
             SuspectService suspectService = CreateSuspectService();
             var suspect = suspectService.GetSuspectById(id);
             return Ok(suspect);
         }
-
+        [HttpPut]
+        [Route("api/Suspect")]
         public IHttpActionResult Put(SuspectEdit suspect)
         {
             if (!ModelState.IsValid)
@@ -59,7 +65,8 @@ namespace BadBoys.WebAPI
 
             return Ok();
         }
-
+        [HttpDelete]
+        [Route("api/Suspect/{id}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateSuspectService();

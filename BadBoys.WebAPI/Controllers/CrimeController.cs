@@ -19,14 +19,16 @@ namespace BadBoys.WebAPI
             var crimeService = new CrimeService(userId);
             return crimeService;
         }
-
+        [HttpGet]
+        [Route("api/Crime")]
         public IHttpActionResult Get()
         {
             CrimeService crimeService = CreateCrimeService();
             var crimes = crimeService.GetCrimes();
             return Ok(crimes);
         }
-
+        [HttpPost]
+        [Route("api/Crime")]
         public IHttpActionResult Post(CrimeCreate crime)
         {
             if(!ModelState.IsValid)
@@ -42,14 +44,16 @@ namespace BadBoys.WebAPI
 
             return Ok();
         }
-
+        [HttpGet]
+        [Route("api/Crime/{id}")]
         public IHttpActionResult Get(int id)
         {
             CrimeService service = CreateCrimeService();
             var crime = service.GetCrimeByCrimeId(id);
             return Ok(crime);
         }
-
+        [HttpPut]
+        [Route("api/Crime")]
         public IHttpActionResult Put(CrimeEdit crime)
         {
             if(!ModelState.IsValid)
@@ -66,7 +70,8 @@ namespace BadBoys.WebAPI
 
             return Ok();
         }
-
+        [HttpDelete]
+        [Route("api/Crime/{id}")]
         public IHttpActionResult Delete(int id)
         {
             CrimeService service = CreateCrimeService();

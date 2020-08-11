@@ -13,12 +13,16 @@ namespace BadBoys.WebAPI
     [Authorize]
     public class CaseController : ApiController
     {
+        [HttpGet]
+        [Route("api/Case")]
         public IHttpActionResult Get()
         {
             CaseService caseService = CreateCaseService();
             var cases = caseService.GetCases();
             return Ok(cases);
         }
+        [HttpPost]
+        [Route("api/Case")]
         public IHttpActionResult Post(CaseCreate currentCase)
         {
             if (!ModelState.IsValid)
@@ -38,6 +42,8 @@ namespace BadBoys.WebAPI
             return suspectCase;
         }
 
+        [HttpGet]
+        [Route("api/Case/{id}")]
         public IHttpActionResult GetCase(int id)
         {
             CaseService caseService = CreateCaseService();
@@ -45,6 +51,8 @@ namespace BadBoys.WebAPI
             return Ok(currentCase);
         }
 
+        [HttpPut]
+        [Route("api/Case")]
         public IHttpActionResult PutCase(CaseEdit currentCase)
         {
             if (!ModelState.IsValid)
@@ -58,6 +66,8 @@ namespace BadBoys.WebAPI
             return Ok();
         }
 
+        [HttpDelete]
+        [Route("api/Case/{id}")]
         public IHttpActionResult DeleteCase(int id)
         {
             var service = CreateCaseService();
