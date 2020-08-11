@@ -7,7 +7,7 @@
   
   <h3 align="center">An API for a Law Enforcement Agency (LEA)</h3>
     <p align="center">
-![BadBoysLogo](https://user-images.githubusercontent.com/65406408/89920783-d1535e80-dbca-11ea-8d74-0d30dcc52a90.png)
+![BadBoysLogo][Logo]
   <p align="center">
     <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms</a>
     <br />
@@ -64,3 +64,5 @@ Many thanks to the following resources for helping us complete these project:<br
 * [Escape Sequences](https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=vs-2019)<br>
                                   </p>
 
+<!-- MARKDOWN LINKS & IMAGES -->
+[Logo]: Images/BadBoysLogo.png
