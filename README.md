@@ -7,7 +7,7 @@
     <p align="center">
 <img src=https://cloudsmallbusinessservice.com/wp-content/uploads/2017/02/Best-Law-Enforcement-Software.png">
   <p align="center">
-    <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="blank"> Inspiration comes in many forms </a>
+    <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms </a>
     <br />
   </p>
 </p>
@@ -19,10 +19,10 @@ To run this application:
 You will need to install Microsoft Visual Studio 2019 and Postman to utilize the API's endpoints easily.
 <br>
 <p align="center">
-•	Link to <a href="https://visualstudio.microsoft.com/downloads/" target="blank">VSC</a>
+•	Link to <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">VSC</a>
 <br>
 <br>
-•	Link to <a href="https://www.postman.com/downloads/" target="blank">Postman</a>
+•	Link to <a href="https://www.postman.com/downloads/" target="_blank">Postman</a>
 </p>
 <p align="center">
 Clone the software from the master branch
