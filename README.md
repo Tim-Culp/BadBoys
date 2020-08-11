@@ -2,7 +2,9 @@
 
 <br />
 <p align="center">
-  <h3 align="center">BadBoysAPI</h3>
+  
+  <h2 align="center">BadBoysAPI</h2>
+  
   <h3 align="center">An API for a Law Enforcement Agency (LEA)</h3>
     <p align="center">
 <img src=https://cloudsmallbusinessservice.com/wp-content/uploads/2017/02/Best-Law-Enforcement-Software.png">
@@ -38,6 +40,15 @@ When adding an additional suspect to the Suspect class you, will need to set the
 Once you have completed the above instructions, you will be able to compile addition cases in Postman with the web address set to post at local host /api/Case. You will need to add DateOfIncident (datetime) SuspectId (int) that is auto assigned from the suspect class, CrimeId (int) that is auto assigned from the crime class, and BadgeId (int) that is auto assigned from the Officer class. Once completed you will be able to set Postman to the get method and see all the finer details of the case.</p>
                  <p align="center">
                                   
+<!-- Contributors -->
+## Contributors
+
+* Nick Davies 
+* Adam Schulz
+* Jack McCoy
+* Tim Culp
+
+<!-- Resources -->
 ## Resources                                  
 Many thanks to the following resources for helping us complete these project:<br>
 * [Decorator Design Pattern](https://www.dofactory.com/net/decorator-design-pattern)<br>
