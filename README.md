@@ -64,4 +64,5 @@ Many thanks to the following resources for helping us complete these project:<br
 * [Foreign Key Relationships](https://docs.microsoft.com/en-us/ef/ef6/fundamentals/relationships)<br>
 * [Creating Custom Endpoints](https://stackoverflow.com/questions/41285555/web-api-net-action-with-custom-endpoint-names)<br>
 * [Escape Sequences](https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=vs-2019)<br>
+* [Rick & Morty Character List](https://rickandmorty.fandom.com/wiki/Category:Characters)
                                   </p>
