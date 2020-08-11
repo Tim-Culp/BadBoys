@@ -3,8 +3,7 @@
 <br />
 <p align="center">  
   
-  <h2 align="center">BadBoysAPI</h2>
-  
+  <h2 align="center">BadBoysAPI</h2>  
   <h3 align="center">An API for a Law Enforcement Agency (LEA)</h3>
   
   <p align="center">
@@ -16,6 +15,9 @@
   </p>
 </p>
 <p align="center">
+  
+<!-- ABOUT THE PROJECT -->
+##About the Project
 This App was designed with the goal that it would be useful for a local Law Enforcement Agency’s (LEA) tracking and locating field work. This app contains four key data layers, a user (officer) class, case class, suspect class and crime class. Case Class is able to be built with individual elements from officer, crime, suspect and the individual properties within each class. 
 <br><br>
                  
@@ -33,6 +35,7 @@ You will need to install Microsoft Visual Studio 2019 and Postman to utilize the
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 * [Postman](https://www.postman.com/downloads/)
 
+## BadBoys API
 <p align="center">
 Clone the software from the master branch
 Begin with creating a login account in order to properly authenticate with the software. You will need to set Postman to the local host address /api/Account/Register and input Email, Password, and Confirm Password to get a token. Once you have a token be sure to set Postman authorization type to bearer token and set the value to your token. Once that is complete, you will be able to create your Officer with FullName (string) and RankOfOfficer (enum). Please note that for officer rank, it is set to an Enum with corresponding values of: Technician (1), Officer, Detective, Corporal, Sergeant, Lieutenant, Captain, DeputyChief, and Chief. 
