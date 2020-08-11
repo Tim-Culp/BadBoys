@@ -17,7 +17,7 @@
 <p align="center">
   
 <!-- ABOUT THE PROJECT -->
-##About the Project
+## About the Project
 This App was designed with the goal that it would be useful for a local Law Enforcement Agency’s (LEA) tracking and locating field work. This app contains four key data layers, a user (officer) class, case class, suspect class and crime class. Case Class is able to be built with individual elements from officer, crime, suspect and the individual properties within each class. 
 <br><br>
                  
