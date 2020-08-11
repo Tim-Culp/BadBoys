@@ -7,7 +7,7 @@
     <p align="center">
 <img src=https://cloudsmallbusinessservice.com/wp-content/uploads/2017/02/Best-Law-Enforcement-Software.png">
   <p align="center">
-    <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms </a>
+    <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms</a>
     <br />
   </p>
 </p>
