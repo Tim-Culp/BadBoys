@@ -1,18 +1,18 @@
 # BadBoys
 
 <br />
-<p align="center">
+<p align="center">  
   
   <h2 align="center">BadBoysAPI</h2>
   
   <h3 align="center">An API for a Law Enforcement Agency (LEA)</h3>
+  
   <p align="center">
     <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms</a>
-
+      <br />
+  
 ![BadBoysLogo](Images/BadBoysLogo.jpg)
-  <p align="center">
-    <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms</a>
-    <br />
+
   </p>
 </p>
 <p align="center">
