@@ -6,8 +6,10 @@
   <h2 align="center">BadBoysAPI</h2>
   
   <h3 align="center">An API for a Law Enforcement Agency (LEA)</h3>
-    <p align="center">
-![BadBoysLogo][Logo]
+  <p align="center">
+    <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms</a>
+
+![BadBoysLogo](Images/BadBoysLogo.jpg)
   <p align="center">
     <a href="https://www.youtube.com/watch?v=BUjUz_QEh48" target="_blank"> Inspiration comes in many forms</a>
     <br />
@@ -63,6 +65,3 @@ Many thanks to the following resources for helping us complete these project:<br
 * [Creating Custom Endpoints](https://stackoverflow.com/questions/41285555/web-api-net-action-with-custom-endpoint-names)<br>
 * [Escape Sequences](https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=vs-2019)<br>
                                   </p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[Logo]: Images/BadBoysLogo.png
