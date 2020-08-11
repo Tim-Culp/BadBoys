@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="CrimeService.cs" />
     <Compile Include="CaseService.cs" />
-    <Compile Include="OfficerCaseService.cs" />
     <Compile Include="SuspectService.cs" />
     <Compile Include="OfficerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

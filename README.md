@@ -44,5 +44,7 @@ https://stackoverflow.com/questions/36998570/asp-net-web-api-2-double-backslash-
 https://docs.microsoft.com/en-us/ef/ef6/fundamentals/relationships<br>
 https://stackoverflow.com/questions/41285555/web-api-net-action-with-custom-endpoint-names<br>
 https://entityframework.net/knowledge-base/44747032/no-context-type-was-found-in-the-assembly-when-running-code-first-migration<br>
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3<br>
+https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=vs-2019<br>
                                   </p>
 

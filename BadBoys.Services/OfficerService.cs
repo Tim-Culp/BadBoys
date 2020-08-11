@@ -51,7 +51,6 @@ namespace BadBoys.Services
                     BadgeId = entity.BadgeId,
                     FullName = entity.FullName,
                     RankOfOfficer = entity.RankOfOfficer,
-                   // CurrentCase = entity.CurrentCase
                 };
             }
         }
@@ -65,7 +64,6 @@ namespace BadBoys.Services
                            .Single(e => e.BadgeId == model.BadgeId);
                 entity.FullName = model.FullName;
                 entity.RankOfOfficer = model.RankOfOfficer;
-               // entity.CurrentCase = model.CurrentCase;
                 return ctx.SaveChanges() == 1;
             }
         }

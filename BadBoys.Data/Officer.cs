@@ -27,22 +27,9 @@ namespace BadBoys.Data
         [Key]
         public int BadgeId { get; set; }
         public Guid OfficerId { get; set; }
+        [Required]
         public string FullName { get; set; }
+        [Required]
         public OfficerRank RankOfOfficer { get; set; }
-        /*public int CurrentCase { get; set; }
-
-        [ForeignKey(nameof(CurrentCase))]
-        public virtual Case Case { get; set; } 
-
-
-
-        public Officer() { }
-        public Officer(Guid officerId, string fullName, int currentCase)
-        {
-            OfficerId = officerId;
-            FullName = fullName;
-            CurrentCase = currentCase;
-        }*/
-
     }
 }

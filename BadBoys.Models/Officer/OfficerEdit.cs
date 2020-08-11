@@ -16,6 +16,5 @@ namespace BadBoys.Models
         public string FullName { get; set; }
         [Display(Name = "Officer Rank")]
         public OfficerRank RankOfOfficer { get; set; }
-        public int? CurrentCase { get; set; }
     }
 }

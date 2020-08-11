@@ -51,7 +51,6 @@
     <Compile Include="Case\CaseDetail.cs" />
     <Compile Include="Case\CaseEdit.cs" />
     <Compile Include="Case\CaseList.cs" />
-    <Compile Include="OfficerCase\OfficerCaseCreate.cs" />
     <Compile Include="Suspect\SuspectCreate.cs" />
     <Compile Include="Suspect\SuspectDetail.cs" />
     <Compile Include="Suspect\SuspectEdit.cs" />
