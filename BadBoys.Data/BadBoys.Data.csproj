@@ -91,10 +91,10 @@
       <DependentUpon>202008111326366_AddedSeededTableData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Suspect.cs" />
-    <Compile Include="Crime.cs" />
-    <Compile Include="Case.cs" />
-    <Compile Include="Officer.cs" />
+    <Compile Include="Classes\Suspect.cs" />
+    <Compile Include="Classes\Crime.cs" />
+    <Compile Include="Classes\Case.cs" />
+    <Compile Include="Classes\Officer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

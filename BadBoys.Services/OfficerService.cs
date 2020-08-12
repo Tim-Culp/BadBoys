@@ -37,7 +37,7 @@ namespace BadBoys.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx.Officers.Select(e => new OfficerList { FullName = e.FullName, BadgeId = e.BadgeId, RankOfOfficer = e.RankOfOfficer, });
-                return query.OrderBy(s => s.FullName).ToArray();
+                return query.OrderBy(s => s.BadgeId).ToArray();
             }
         }
 
