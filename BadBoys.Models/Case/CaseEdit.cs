@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace BadBoys.Models
 {
-    public class CaseEdit : Case
+    public class CaseEdit
     {
+        public int CaseKeyId { get; set; }
+        public DateTime DateOfIncident { get; set; }
+        public int BadgeId { get; set; }
+        public int SuspectId { get; set; }
+        public int CrimeId { get; set; }
     }
 }

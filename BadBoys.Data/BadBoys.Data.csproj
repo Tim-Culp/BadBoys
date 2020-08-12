@@ -10,11 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BadBoys.Data</RootNamespace>
     <AssemblyName>BadBoys.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -85,15 +86,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Suspect.cs" />
-    <Compile Include="Crime.cs" />
-    <Compile Include="Case.cs" />
-    <Compile Include="Officer.cs" />
+    <Compile Include="Migrations\202008111326366_AddedSeededTableData.cs" />
+    <Compile Include="Migrations\202008111326366_AddedSeededTableData.designer.cs">
+      <DependentUpon>202008111326366_AddedSeededTableData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Classes\Suspect.cs" />
+    <Compile Include="Classes\Crime.cs" />
+    <Compile Include="Classes\Case.cs" />
+    <Compile Include="Classes\Officer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202008111326366_AddedSeededTableData.resx">
+      <DependentUpon>202008111326366_AddedSeededTableData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

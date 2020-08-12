@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using BadBoys.WebAPI.Models;
 using BadBoys.WebAPI.Providers;
 using BadBoys.WebAPI.Results;
+using BadBoys.Data;
 
 namespace BadBoys.WebAPI.Controllers
 {
